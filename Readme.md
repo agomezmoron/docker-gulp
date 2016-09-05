@@ -3,6 +3,7 @@
 <img src="img/docker_logo.png" height="125" />
 <img src="img/angularjs_logo.png" height="125" />
 <img src="img/npmbower_logo.png" height="125" />
+<img src="img/sass_logo.png" height="125" />
 
 ## Table of Contents
   - [Requirements](#requirements)
