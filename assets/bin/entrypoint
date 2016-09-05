@@ -1,0 +1,23 @@
+#!/bin/bash
+#=====================
+# Environment variables
+#=====================
+
+ENTRYPOINT_ARGS="$@"
+PROJECT_DIR="/src"
+
+#=====================
+# Creating needed folders
+#=====================
+cd $PROJECT_DIR
+
+rm -rf $PROJECT_DIR/dist/* &> /dev/null
+rm -rf $PROJECT_DIR/webpack/* &> /dev/null
+rm -rf $PROJECT_DIR/node_modules/* &> /dev/null
+rm -rf $PROJECT_DIR/bower_components/* &> /dev/null
+
+# Building app
+npm install
+bower install --allow-root
+# Executing the gulp task
+/bin/bash --login -c "gulp $GULP_TASK"
