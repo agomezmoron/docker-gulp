@@ -18,14 +18,16 @@ There are two options to build the image:
 You can build the app from this directory running:
 
 ```
-docker build -t agomezmoron/docker-gulp-angular
+docker build -t agomezmoron/docker-gulp-angular .
 ```
 
 ### Pulling from Docker
 
 You can pull the image from Docker:
 
+```
 docker pull agomezmoron/docker-gulp-angular
+```
 
 ## Docker Run
 
