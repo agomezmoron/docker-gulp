@@ -27,7 +27,9 @@ docker build -t agomezmoron/docker-gulp-angular .
 
 You can pull the image from Docker:
 
+```
 docker pull agomezmoron/docker-gulp-angular
+```
 
 ## Docker Run
 
