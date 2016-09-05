@@ -10,6 +10,7 @@
   - [Docker run](#docker-run)
   - [Docker stop](#docker-stop)
   - [Docker cheat sheet](https://github.com/wsargent/docker-cheat-sheet)
+  - [Cleaning untagged images](#cleaning-untagged-images)
 
 ## Requirements
 
@@ -52,6 +53,12 @@ Once Docker is running our image, there is a way to stop it:
  * Execute **docker ps** and you will get the Container ID.
  * Then, execute **docker kill CONTAINER_ID** and the Docker image will be stoped.
 
-### Notes
+## Cleaning untagged images
 
-The second part of the command, **'&& docker rmi -f $(docker images -f "dangling=true" -q) &> /dev/null'**, is an optional one that deletes past images of the builds so the PC does not end up with several duplicated images. It can be removed without affecting the build.
+If you want to clean all the untagged images you have in your Docker you can perform:
+
+```
+docker rmi -f $(docker images -f "dangling=true" -q) &> /dev/null
+```
+
+and it will detelete all the past images of the builds, so the PC does not end up with several duplicated images. It can be removed without affecting the build.
