@@ -5,19 +5,32 @@
 
 ENTRYPOINT_ARGS="$@"
 PROJECT_DIR="/src"
+NPM_FILE=package.json
+BOWER_FILE=bower.json
 
 #=====================
-# Creating needed folders
+# Go to the project folder
 #=====================
 cd $PROJECT_DIR
 
-rm -rf $PROJECT_DIR/dist/* &> /dev/null
-rm -rf $PROJECT_DIR/webpack/* &> /dev/null
-rm -rf $PROJECT_DIR/node_modules/* &> /dev/null
-rm -rf $PROJECT_DIR/bower_components/* &> /dev/null
+#=====================
+# Building the app
+#=====================
 
-# Building app
-npm install
-bower install --allow-root
+# Checking if there is a npm file
+if [ -f "$NPM_FILE" ]
+  then
+  npm install
+  npm update
+fi
+
+# Checking if there is a bower file
+if [ -f "$BOWER_FILE" ]
+  then
+  bower install --allow-root
+  bower update --allow-root
+fi
+
 # Executing the gulp task
+ls -l
 /bin/bash --login -c "gulp $GULP_TASK"

@@ -1,9 +1,11 @@
-# SAM Web Docker image
+# Docker Gulp Angular image
 
 ## Table of Contents
   - [Requirements](#requirements)
   - [Docker build](#docker-build)
   - [Docker run](#docker-run)
+  - [Docker stop](#docker-stop)
+  - [Docker cheat sheet](https://github.com/wsargent/docker-cheat-sheet)
 
 ## Requirements
 
@@ -18,7 +20,7 @@ There are two options to build the image:
 You can build the app from this directory running:
 
 ```
-docker build -t agomezmoron/docker-gulp-angular
+docker build -t agomezmoron/docker-gulp-angular .
 ```
 
 ### Pulling from Docker
@@ -32,15 +34,17 @@ docker pull agomezmoron/docker-gulp-angular
 Run the image with the following command:
 
 ```
-docker run --privileged -v /YOUR/SOURCES/FOLDER:/src -p 90:8080  -e HOST_UID=$(id -u) -e HOST_GID=$(id -g) -e GULP_TASK="YOUR_GULP_TASK" --rm -t -i --net=host agomezmoron/docker-gulp-angular
+docker run --privileged -v /YOUR/SOURCES/FOLDER:/src -p 90:8080  -e GULP_TASK="YOUR_GULP_TASK" -d -t -i agomezmoron/docker-gulp-angular
 ```
 
-Nowadays, there are 3 supported gulp tasks:
+And you will have your docker running on the 90 port.
 
- * *serve:dev :* It builds the app and serves it to work with. The server is started on the 8080 (in Docker) but the app is serve in the port you binded before (ex: 90).
- * *build:dist :* It builds the app in the *dist* folder.
- * *build:war :* It builds the app into a .war file in the *dist* folder.
- * *build:zip :* It builds the app into a .zip file in the *dist* folder.
+## Docker Stop
+
+Once Docker is running our image, there is a way to stop it:
+
+ * Execute **docker ps** and you will get the Container ID.
+ * Then, execute **docker kill CONTAINER_ID** and the Docker image will be stoped.
 
 ### Notes
 
