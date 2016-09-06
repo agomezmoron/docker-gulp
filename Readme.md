@@ -1,7 +1,8 @@
-# Docker Gulp Angular image
+# Docker Gulp image
+
+Docker image to work with npm, gulp and bower stack. You can use it to work with, for example, AngularJS.
 
 <img src="img/docker_logo.png" height="125" />
-<img src="img/angularjs_logo.png" height="125" />
 <img src="img/npmbower_logo.png" height="125" />
 <img src="img/sass_logo.png" height="125" />
 
@@ -34,7 +35,7 @@ docker build -t agomezmoron/docker-gulp-angular .
 You can pull the image from Docker:
 
 ```
-docker pull agomezmoron/docker-gulp-angular
+docker pull agomezmoron/docker-gulp
 ```
 
 ## Docker Run
@@ -42,12 +43,12 @@ docker pull agomezmoron/docker-gulp-angular
 Run the image with the following command:
 
 ```
-docker run --privileged -v /YOUR/SOURCES/FOLDER:/src -p 90:8080  -e GULP_TASK="YOUR_GULP_TASK" -d -t -i agomezmoron/docker-gulp-angular
+docker run --privileged -v /YOUR/SOURCES/FOLDER:/src -p 90:8080  -e GULP_TASK="YOUR_GULP_TASK" -d -t -i agomezmoron/docker-gulp
 ```
 
 or
 
-docker run --privileged -v /YOUR/SOURCES/FOLDER:/src -p 90:8080  -e GULP_TASK="YOUR_GULP_TASK" -t -i agomezmoron/docker-gulp-angular
+docker run --privileged -v /YOUR/SOURCES/FOLDER:/src -p 90:8080  -e GULP_TASK="YOUR_GULP_TASK" -t -i agomezmoron/docker-gulp
 
 And you will have your docker running on the 90 port.
 
