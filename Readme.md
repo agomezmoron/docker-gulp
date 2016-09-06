@@ -22,7 +22,7 @@ You have to install [Docker](https://www.docker.com/) following the [installatio
 
 There are two options to build the image:
 
-### Building the entire image
+### 1) Building the entire image
 
 You can build the app from this directory running:
 
@@ -30,7 +30,7 @@ You can build the app from this directory running:
 docker build -t agomezmoron/docker-gulp-angular .
 ```
 
-### Pulling from Docker
+### 2) Pulling from Docker
 
 You can pull the image from Docker:
 
