@@ -32,5 +32,4 @@ if [ -f "$BOWER_FILE" ]
 fi
 
 # Executing the gulp task
-ls -l
 /bin/bash --login -c "gulp $GULP_TASK"
