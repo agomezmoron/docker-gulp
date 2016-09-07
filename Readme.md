@@ -54,7 +54,7 @@ docker run --privileged -v /YOUR/SOURCES/FOLDER:/src -p 90:8080  -e GULP_TASK="Y
 
 And you will have your docker running on the 90 port.
 
-**Important:** If you are running Docker on Windwos, please check you have the shared drives enabled:
+**Important:** If you are running Docker on Windows, please check you have the shared drives enabled:
 
 <img src="img/docker_settings_windows.png" />
 <img src="img/docker_shared_windows.png" />
