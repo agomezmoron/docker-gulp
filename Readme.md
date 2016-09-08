@@ -6,7 +6,7 @@ Docker image to work with npm, gulp and bower stack. You can use it to work with
 <img src="img/npmbower_logo.png" height="125" />
 <img src="img/sass_logo.png" height="125" />
 
-![](https://images.microbadger.com/badges/image/agomezmoron/docker-gulp.svg)
+[![](https://images.microbadger.com/badges/image/agomezmoron/docker-gulp.svg)](https://hub.docker.com/r/agomezmoron/docker-gulp/)
 
 ## Table of Contents
   - [Requirements](#requirements)
